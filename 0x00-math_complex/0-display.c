@@ -8,10 +8,13 @@ void display_complex_number(complex c)
 {
 	if (c.im == 0)
 	{
-		printf("%g\n", c.re);
+		printf("%G\n", c.re);
+	} else if (c.im < 0) {
+		printf("%g - %gi\n",c.re,-c.im);
+	}
 	}
 	else
 	{
-		printf("%g + %gi\n", c.re, c.im);
+		printf("%G + %Gi\n", c.re, c.im);
 	}
 }
